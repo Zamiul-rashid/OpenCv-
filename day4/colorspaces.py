@@ -1,11 +1,31 @@
-import cv2 as cv 
+import cv2 as cv
+import matplotlib.pyplot as plt
 img = cv.imread("E:\OpenCv\Assets\pic1.jpg")
 
-cv.imshow("img" , img )
+#pylint:disable=no-member
+cv.imshow('img', img)
 
-gray = cv.cvtColor(img , cv.COLOR_BGR2GRAY)
+# plt.imshow(img)
+# plt.show()
 
-cv.imshow("Gray",gray)
+# BGR to Grayscale
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+cv.imshow('Gray', gray)
 
+# BGR to HSV
+hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+cv.imshow('HSV', hsv)
+
+# BGR to L*a*b
+lab = cv.cvtColor(img, cv.COLOR_BGR2LAB)
+cv.imshow('LAB', lab)
+
+# BGR to RGB
+rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+cv.imshow('RGB', rgb)
+
+# HSV to BGR
+lab_bgr = cv.cvtColor(lab, cv.COLOR_LAB2BGR)
+cv.imshow('LAB --> BGR', lab_bgr)
 
 cv.waitKey(0)
