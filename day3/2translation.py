@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np 
 
 img = cv.imread("E:\OpenCv\Assets\pic1.jpg")
-# cv.imshow("image", img)
+cv.imshow("image", img)
 
 def translation(img ,x,y):
     trasnmat = np.float32([[1,0,x],[0,1,y]])
