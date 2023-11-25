@@ -1,7 +1,5 @@
 import cv2 as cv 
 import mediapipe as mp
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning, module="tensorflow")
 
 mp_drawing = mp.solutions.drawing_utils
 my_hands = mp.solutions.hands
