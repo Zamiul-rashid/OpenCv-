@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 import os 
 import time
-haar_cascade = cv.CascadeClassifier('E:\OpenCv\Face_detection\har_cascade_face.xml')
+haar_cascade = cv.CascadeClassifier('E:\\OpenCv\Face_detection\har_cascade_face.xml')
 Dir = r'E:\OpenCv\Face_detection\sample'
 feature = []
 label = []

@@ -1,6 +1,6 @@
 import cv2 as cv 
 
-haar_cascade = cv.CascadeClassifier('E:\OpenCv\Face_detection\har_cascade_face.xml')
+haar_cascade = cv.CascadeClassifier(r'E:\OpenCv\Face_detection\har_cascade_face.xml')
 img_arrey = cv.imread(r"E:\OpenCv\Face_detection\samp2.jpg")
 img_arrey = cv.resize(img_arrey, (500,500))
 gray = cv.cvtColor(img_arrey, cv.COLOR_BGR2GRAY)

@@ -17,7 +17,7 @@ img = cv.imread(r"E:\OpenCv\Face_detection\samp2.jpg")
 # img = cv.resize(img, (500,500))
 grey = cv.cvtColor(img, cv.COLOR_BGR2GRAY)  
 
-cv.imshow('Person', img)
+cv.imshow('Person', grey)
 
 #detect 
 
