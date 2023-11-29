@@ -14,11 +14,8 @@ with mp_hands.Hands(
         success, image = cap.read()
         if not success:
             print("Ignoring empty camera frame.")
-            # If loading a video, use 'break' instead of 'continue'.
             continue
 
-        # Flip the image horizontally for a later selfie-view display, and convert
-        # the BGR image to RGB.
         image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
         # To improve performance, optionally mark the image as not writeable to
         # pass by reference.
@@ -68,13 +65,6 @@ with mp_hands.Hands(
                 fps= str(val)+' fingers'
                 cv2.putText(image, (fps), (0, 25), cv2.FONT_HERSHEY_PLAIN, 2, (255, 255, 0), 3)
                 cv2.putText(image, (fin), (0, 60), cv2.FONT_HERSHEY_PLAIN, 2, (10, 10, 0), 2)
-
-
-
-
-
-
-
 
         cv2.imshow('MediaPipe Hands', image)
 

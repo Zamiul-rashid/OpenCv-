@@ -10,7 +10,7 @@ bg_subtractor = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=50,
 # Create a CSRT tracker
 tracker = cv2.TrackerCSRT_create()
 
-# Read the first frame
+
 ret, frame = cap.read()
 if not ret:
     print("Error reading the video")
